@@ -1,0 +1,291 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EventBrite" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="670,861.333333333333" sap2010:WorkflowViewState.IdRef="EventBrite_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="EventBrite" sap:VirtualizedContainerService.HintSize="694,815.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="City" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="State" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Query" />
+      <Variable x:TypeArguments="s:String[]" Name="Test" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,193.666666666667 110,193.666666666667 110,223.666666666667</av:PointCollection>
+        <x:Double x:Key="Height">779.35333333333324</x:Double>
+        <x:Double x:Key="Width">664</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID7</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">2,423.666666666667</av:Point>
+          <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">110,476.333333333334 110,506.333333333334 210,506.333333333334 210,533.666666666667</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser Chrome" Hidden="False" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Private="False" Url="[&quot;https://www.eventbrite.com/d/&quot;+state+&quot;--&quot;+city+&quot;/free--events/&quot; + Query]">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="506,905.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_32">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="s:String[]" Name="EmailAddress" />
+                <Variable x:TypeArguments="x:String" Name="file_location" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap:VirtualizedContainerService.HintSize="468,813.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="s:String[]" Name="EmailAddress" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="430,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'FreeHoust Page'" sap:VirtualizedContainerService.HintSize="430,344" sap2010:WorkflowViewState.IdRef="BrowserScope_10" InformativeScreenshot="0b0e7f05fcd082f42abc7f10e264335c" Selector="&lt;html app='chrome.exe' title='Free Houston, TX Technology Events | Eventbrite' /&gt;">
+                  <ui:BrowserScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368,198" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ExtractData ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'SECTION'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='ul' class='search-main-content__events-list' idx='1'/&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' class='search-event-card-wrapper' idx='1'/&gt;&lt;webctrl tag='div' class='search-event-card eds-l-pad-hor-2 eds-l-mn-pad-hor-5 eds-l-pad-vert-3 eds-l-mn-pad-vert-5' idx='1'/&gt;&lt;webctrl tag='div' class='eds-l-pad-all-1' idx='1'/&gt;&lt;webctrl tag='div' class='eds-card eds-card--neutral' idx='1'/&gt;&lt;webctrl tag='section' class='eds-l-pad-all-6 eds-media-card-content eds-media-card-content--list eds-media-card-content--standard eds-media-card-content--fixed' idx='1'/&gt;&lt;webctrl tag='main' class='eds-media-card-content__content-container eds-l-pad-right-2' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content__principal' idx='1'/&gt;&lt;/row&gt;&lt;column exact='1' name='Subject' attr='text' name2='Description' attr2='href'&gt;&lt;webctrl tag='ul' class='search-main-content__events-list' idx='1'/&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' class='search-event-card-wrapper' idx='1'/&gt;&lt;webctrl tag='div' class='search-event-card eds-l-pad-hor-2 eds-l-mn-pad-hor-5 eds-l-pad-vert-3 eds-l-mn-pad-vert-5' idx='1'/&gt;&lt;webctrl tag='div' class='eds-l-pad-all-1' idx='1'/&gt;&lt;webctrl tag='div' class='eds-card eds-card--neutral' idx='1'/&gt;&lt;webctrl tag='section' class='eds-l-pad-all-6 eds-media-card-content eds-media-card-content--list eds-media-card-content--standard eds-media-card-content--fixed' idx='1'/&gt;&lt;webctrl tag='main' class='eds-media-card-content__content-container eds-l-pad-right-2' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content__principal' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__primary-content' idx='1'/&gt;&lt;webctrl tag='a' class='eds-media-card-content__action-link' idx='1'/&gt;&lt;webctrl tag='h3' class='eds-media-card-content__title eds-text-color--grey-800 eds-text-bl' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' class='eds-event-card__formatted-name--is-clamped' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Start Date' attr='text'&gt;&lt;webctrl tag='ul' class='search-main-content__events-list' idx='1'/&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' class='search-event-card-wrapper' idx='1'/&gt;&lt;webctrl tag='div' class='search-event-card eds-l-pad-hor-2 eds-l-mn-pad-hor-5 eds-l-pad-vert-3 eds-l-mn-pad-vert-5' idx='1'/&gt;&lt;webctrl tag='div' class='eds-l-pad-all-1' idx='1'/&gt;&lt;webctrl tag='div' class='eds-card eds-card--neutral' idx='1'/&gt;&lt;webctrl tag='section' class='eds-l-pad-all-6 eds-media-card-content eds-media-card-content--list eds-media-card-content--standard eds-media-card-content--fixed' idx='1'/&gt;&lt;webctrl tag='main' class='eds-media-card-content__content-container eds-l-pad-right-2' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content__principal' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__sub-content' idx='1'/&gt;&lt;webctrl tag='div' class='eds-text-bs--fixed eds-text-color--grey-600 eds-l-mar-top-1' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Location' attr='text'&gt;&lt;webctrl tag='ul' class='search-main-content__events-list' idx='1'/&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' class='search-event-card-wrapper' idx='1'/&gt;&lt;webctrl tag='div' class='search-event-card eds-l-pad-hor-2 eds-l-mn-pad-hor-5 eds-l-pad-vert-3 eds-l-mn-pad-vert-5' idx='1'/&gt;&lt;webctrl tag='div' class='eds-l-pad-all-1' idx='1'/&gt;&lt;webctrl tag='div' class='eds-card eds-card--neutral' idx='1'/&gt;&lt;webctrl tag='section' class='eds-l-pad-all-6 eds-media-card-content eds-media-card-content--list eds-media-card-content--standard eds-media-card-content--fixed' idx='1'/&gt;&lt;webctrl tag='main' class='eds-media-card-content__content-container eds-l-pad-right-2' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__content__principal' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__sub-content' idx='1'/&gt;&lt;webctrl tag='div' class='eds-media-card-content__sub-content-cropped' idx='1'/&gt;&lt;webctrl tag='div' class='eds-text-bs--fixed eds-text-color--grey-600 eds-l-mar-top-1' idx='1'/&gt;&lt;webctrl tag='div' class='card-text--truncated__one' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="ExtractData_9" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='Next' parentid='root' tag='A' /&gt;">
+                          <ui:ExtractData.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f093763f4b542014f2b8a88280fcb649" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section' tag='SECTION' /&gt;" WaitForReady="COMPLETE" />
+                          </ui:ExtractData.Target>
+                        </ui:ExtractData>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:BrowserScope.Body>
+                </ui:BrowserScope>
+                <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="C:\Users\btdor\Desktop\events.csv" sap:VirtualizedContainerService.HintSize="430,86.6666666666667" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" />
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke FixCSVFormat workflow" sap:VirtualizedContainerService.HintSize="430,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="FixCSVFormat.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_file_location">C:\Users\btdor\Desktop\events.csv</InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_file_location">[file_location]</OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="430,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:OpenBrowser>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">102,533.666666666667</av:Point>
+              <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">210,586.333333333333 280,586.333333333333 280,603.666666666667</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke formatExcel workflow" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="formatExcel.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">172,603.666666666667</av:Point>
+                  <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">280,656.333333333333 280,686.333333333333 290,686.333333333333 290,693.666666666667</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SendEmail workflow" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="SendEmail.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">182,693.666666666667</av:Point>
+                      <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">398,720 428,720 428,753.02 448,753.02</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ImportCalendar workflow" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ImportCalendar.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">448,726.686666666667</av:Point>
+                          <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke OpenCalendar workflow" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="OpenCalendar.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                    </FlowStep>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">2,223.666666666667</av:Point>
+          <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">110,276.333333333333 110,294.02</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog City" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter City:">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="ui:GenericValue">[City]</OutArgument>
+        </ui:InputDialog.Result>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InputDialog>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">2,294.02</av:Point>
+              <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">110,346.686666666667 110,354.02</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog State" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter State:">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="ui:GenericValue">[State]</OutArgument>
+            </ui:InputDialog.Result>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InputDialog>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">2,354.02</av:Point>
+                  <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">110,406.686666666667 110,423.666666666667</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog Query" sap:VirtualizedContainerService.HintSize="216,52.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter Keyword">
+                <ui:InputDialog.Result>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[Query]</OutArgument>
+                </ui:InputDialog.Result>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InputDialog>
+              <FlowStep.Next>
+                <x:Reference>__ReferenceID0</x:Reference>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+  </Flowchart>
+</Activity>
