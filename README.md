@@ -18,4 +18,4 @@ We utilized a web browser, going directly to the search query using variables in
 [Joshua Fitzgerald](https://www.linkedin.com/in/fitz6/)
 [Robert McCutchen](https://www.linkedin.com/in/robert-mccutchen-342333185/)
 
-Please consider improving this project by ope ing a pull request with a proposed change!
+Please consider improving this project by opening a pull request with a proposed change!
