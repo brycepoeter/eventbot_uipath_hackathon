@@ -17,3 +17,5 @@ We utilized a web browser, going directly to the search query using variables in
 [Bryce Poeter](https://www.linkedin.com/in/bryce-poeter-148651186/)
 [Joshua Fitzgerald](https://www.linkedin.com/in/fitz6/)
 [Robert McCutchen](https://www.linkedin.com/in/robert-mccutchen-342333185/)
+
+Please consider improving this project by ope ing a pull request with a proposed change!
